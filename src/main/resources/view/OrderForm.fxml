@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="745.0" prefWidth="1158.0" stylesheets="@../style/dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.henHouse.controller.OrderController">
+   <children>
+      <Line endX="1123.2928466796875" endY="115.0" layoutY="-24.0" startX="50.29289245605469" startY="115.0" strokeWidth="3.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#cc0000" />
+                  <Stop color="#ff9966" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Label layoutX="809.0" layoutY="18.0" prefHeight="70.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Manager Order Form">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="51.0" layoutY="103.0" prefHeight="357.0" prefWidth="1076.0" style="-fx-background-radius: 20; -fx-background-color: white;">
+         <children>
+            <Label layoutX="30.0" layoutY="14.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Order Info" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="114.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Customer Info" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtOrderId" editable="false" labelFloat="true" layoutX="30.0" layoutY="72.0" prefHeight="30.0" prefWidth="220.0" promptText="Order Id" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtOrderDate" editable="false" labelFloat="true" layoutX="810.0" layoutY="72.0" prefHeight="30.0" prefWidth="220.0" promptText="Order Date" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbCustomer" labelFloat="true" layoutX="30.0" layoutY="170.0" onAction="#cmbCustomerOnAction" prefHeight="29.0" prefWidth="220.0" promptText="Customer Id" styleClass="comboBox" stylesheets="@../style/orderForm.css" unFocusColor="#0c37e4" />
+            <JFXTextField fx:id="txtCustomer" editable="false" labelFloat="true" layoutX="453.0" layoutY="170.0" prefHeight="29.0" prefWidth="220.0" promptText="Customer Name" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtContact" editable="false" labelFloat="true" layoutX="810.0" layoutY="170.0" prefHeight="30.0" prefWidth="220.0" promptText="Customer Telephone No" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <Label layoutX="30.0" layoutY="212.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Add Item Info" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbItem" labelFloat="true" layoutX="30.0" layoutY="268.0" onAction="#cmbItemOnAction" prefHeight="29.0" prefWidth="180.0" promptText="Item Code" styleClass="comboBox" stylesheets="@../style/orderForm.css" unFocusColor="#0c37e4" />
+            <JFXTextField fx:id="txtDescription" editable="false" labelFloat="true" layoutX="254.0" layoutY="268.0" prefHeight="29.0" prefWidth="260.0" promptText="Description" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUnitPrice" editable="false" labelFloat="true" layoutX="564.0" layoutY="268.0" prefHeight="29.0" prefWidth="180.0" promptText="Unit Price" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="928.0" layoutY="265.0" onAction="#txtQtyOnAction" prefHeight="29.0" prefWidth="100.0" promptText="Qty" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQtyOnHand" editable="false" labelFloat="true" layoutX="787.0" layoutY="268.0" prefHeight="29.0" prefWidth="100.0" promptText="Qty On Hand" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="51.0" layoutY="476.0" prefHeight="245.0" prefWidth="1076.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <TableView fx:id="tblCart" layoutX="30.0" layoutY="14.0" prefHeight="168.0" prefWidth="1010.0">
+               <columns>
+                  <TableColumn fx:id="colItemCode" prefWidth="144.00003051757812" text="Item code" />
+                  <TableColumn fx:id="colDescription" prefWidth="257.0" text="Description" />
+                  <TableColumn fx:id="colQty" prefWidth="113.0" text="Qty" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="162.0" text="Unit price" />
+                  <TableColumn fx:id="colTotal" prefWidth="177.0" text="Total" />
+                  <TableColumn fx:id="colAction" prefWidth="153.0" text="Action" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="txtTotal" editable="false" labelFloat="true" layoutX="38.0" layoutY="196.0" prefHeight="30.0" prefWidth="220.0" promptText="Total" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXButton fx:id="placeOrderBtn" buttonType="RAISED" layoutX="797.0" layoutY="194.0" onAction="#btnPlaceOrderOnAction" prefHeight="30.0" prefWidth="245.0" style="-fx-background-color: #b51313;" text="Place Order" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/placeOrder.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="326.0" layoutY="276.0" onAction="#btnNewCustomerOnAction" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: #2ecc71;" text="New +" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" graphicTextGap="10.0" layoutX="79.0" layoutY="417.0" onAction="#btnAddtoCartOnAction" prefHeight="33.0" prefWidth="1004.0" style="-fx-background-color: #3498db;" text="Add to cart" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="24.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../image/cart.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

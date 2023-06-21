@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="745.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.henHouse.controller.StockFormController">
+   <children>
+      <Label layoutX="773.0" layoutY="38.0" prefHeight="70.0" prefWidth="372.0" stylesheets="@../style/label.css" text="Manager Stock Form">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+      <Line endX="1123.2928466796875" endY="115.0" layoutX="12.0" layoutY="-7.0" startX="34.0" startY="115.0" strokeWidth="3.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#cc0000" />
+                  <Stop color="#ff9966" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <AnchorPane layoutX="42.0" layoutY="124.0" prefHeight="357.0" prefWidth="1095.0" style="-fx-background-radius: 20; -fx-background-color: white;">
+         <children>
+            <Label layoutX="30.0" layoutY="14.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Supplier Info" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="114.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Item Info" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="descriptionTxt" labelFloat="true" layoutX="395.0" layoutY="171.0" prefHeight="29.0" prefWidth="220.0" promptText="Depcription" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="qtyOnHandTxt" labelFloat="true" layoutX="777.0" layoutY="171.0" prefHeight="30.0" prefWidth="220.0" promptText="Qty.On Hand" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="qtyTxt" labelFloat="true" layoutX="30.0" layoutY="237.0" prefHeight="29.0" prefWidth="157.0" promptText="Qty" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="manufacturedDateTxt" labelFloat="true" layoutX="530.0" layoutY="237.0" prefHeight="29.0" prefWidth="180.0" promptText="Manufacture Date" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="unitPriceTxt" labelFloat="true" layoutX="261.0" layoutY="236.0" prefHeight="29.0" prefWidth="177.0" promptText="Unit Price" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="expirationDateTxt" labelFloat="true" layoutX="792.0" layoutY="237.0" prefHeight="29.0" prefWidth="204.0" promptText="Expiration Date" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXComboBox fx:id="itemComboBox" labelFloat="true" layoutX="30.0" layoutY="165.0" onAction="#onActionGetItem" prefHeight="29.0" prefWidth="220.0" promptText="Item Id" styleClass="comboBox" stylesheets="@../style/orderForm.css" unFocusColor="#0c37e4" />
+            <JFXTextField fx:id="SupNameTxt" labelFloat="true" layoutX="395.0" layoutY="74.0" prefHeight="29.0" prefWidth="220.0" promptText="Supplier Name" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="SupCompanyTxt" labelFloat="true" layoutX="777.0" layoutY="73.0" prefHeight="30.0" prefWidth="220.0" promptText="Supplier Company" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXButton fx:id="saveBtn" buttonType="RAISED" layoutX="32.0" layoutY="300.0" onAction="#onActionSave" prefHeight="33.0" prefWidth="1012.0" style="-fx-background-color: #b51313;" text="Save Details" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="supIdComboBox" labelFloat="true" layoutX="30.0" layoutY="74.0" onAction="#onActionComboBox" prefHeight="29.0" prefWidth="220.0" promptText="Supplier Id" styleClass="comboBox" stylesheets="@../style/orderForm.css" unFocusColor="#0c37e4" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="40.0" layoutY="489.0" prefHeight="239.0" prefWidth="1095.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <TableView fx:id="supplyTbl" layoutX="34.0" layoutY="64.0" prefHeight="157.0" prefWidth="1010.0" stylesheets="@../style/dashboard.css">
+               <columns>
+                  <TableColumn fx:id="colStockId" prefWidth="113.0" text="Stock Id" />
+                  <TableColumn fx:id="colItemCode" prefWidth="156.38417053222656" text="Item Code" />
+                  <TableColumn fx:id="colSupplyId" prefWidth="138.95462036132812" text="Supply Id" />
+                  <TableColumn fx:id="colQty" prefWidth="165.42770385742188" text="Qty" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="223.9776611328125" text="Unit Price" />
+                  <TableColumn fx:id="colExpiringDate" prefWidth="215.02239990234375" text="Expiring Date" />
+                  <TableColumn prefWidth="121.13116455078125" text="Qty" />
+               </columns>
+            </TableView>
+            <TextField fx:id="stockIdSearchTxt" layoutX="37.0" layoutY="10.0" prefHeight="40.0" prefWidth="374.0" promptText="Search Stock Id" styleClass="txt-field" stylesheets="@../style/customer.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#4059a9" />
+               </effect>
+            </TextField>
+            <JFXButton fx:id="searchBtn" buttonType="RAISED" layoutX="411.0" layoutY="7.0" onAction="#onActionSearch" prefHeight="45.0" prefWidth="71.0" style="-fx-background-color: #4059a9;" text="." textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#b51313" />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="434.0" layoutY="15.0">
+               <image>
+                  <Image url="@../image/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

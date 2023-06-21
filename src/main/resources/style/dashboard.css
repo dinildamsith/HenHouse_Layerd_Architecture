@@ -1,0 +1,133 @@
+.table-view{
+    -fx-background-radius: 15;
+    -fx-background-color: transparent;
+    -fx-border-radius: 2;
+    -fx-border-color: transparent;
+}
+
+/*.table-view:focused{*/
+/*    -fx-background-color: rgba(0, 0, 0, 0.24);*/
+/*}*/
+
+/* Spaltenköpfe
+    Struktur column-header-background -> column-header */
+
+.table-view .column-header-background{
+    -fx-background-color: #d90429;
+    -fx-background-radius: 15px;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .table-row-cell{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #338dd0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: transparent;
+}
+
+.axis {
+    -fx-text-fill: #4682b4;
+}
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-text-fill:  black;
+}
+
+.chart-plot-background{
+    -fx-padding:0px;
+    -fx-font-family: Verdana;
+    -fx-text-fill: black;
+    -fx-background-color: transparent;
+
+}
+.chart-content{
+    -fx-background-color: transparent;
+    -fx-padding:30px;
+}
+
+.CategoryAxis{
+    -fx-color:white;
+}
+
+.axis {
+    -fx-font-size: 1.4em;
+    -fx-tick-label-fill: black;
+    -fx-tick-length: 10;
+    -fx-minor-tick-length: 5;
+    -fx-minor-tick-visible: black;
+}
+
+.axis-label{
+    -fx-text-fill: black ;
+}
+
+.chart-bar{
+    -fx-background-radius: 20px 20px 0 0;
+}
+
+.chart-bar.default-color0{
+    -fx-bar-fill: #d90429;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-text-fill: white ;
+}
+
+#numberAxis{
+    -fx-border-color: transparent black transparent transparent;
+    -fx-minor-tick-visible: false;
+}
+
+#categoryAxis{
+    -fx-border-color: black transparent transparent transparent;
+}
+
+.axis-tick-mark{
+    -fx-fill: null;
+    -fx-stroke: black;
+}
+
+.tool-bar{
+    -fx-background-color: transperant;
+}
+

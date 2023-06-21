@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="745.0" prefWidth="1158.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.henHouse.controller.EmployeeFormController">
+   <children>
+      <Line endX="1123.2928466796875" endY="115.0" layoutX="20.0" layoutY="-4.0" startX="50.29289245605469" startY="115.0" strokeWidth="3.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#cc0000" />
+                  <Stop color="#ff9966" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <AnchorPane layoutX="74.0" layoutY="129.0" prefHeight="314.0" prefWidth="1073.0" style="-fx-background-radius: 20; -fx-background-color: white;">
+         <children>
+            <Label fx:id="lblMain" layoutX="20.0" layoutY="22.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Add Employee Details" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtName" editable="false" labelFloat="true" layoutX="365.0" layoutY="82.0" prefHeight="30.0" prefWidth="256.0" promptText="Employee Name" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtContact" editable="false" labelFloat="true" layoutX="794.0" layoutY="204.0" prefHeight="30.0" prefWidth="220.0" promptText="Telephone No" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtSalary" editable="false" labelFloat="true" layoutX="640.0" layoutY="82.0" prefHeight="29.0" prefWidth="178.0" promptText="Salary" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <Label layoutX="20.0" layoutY="134.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Contact Info" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="CmbJob" labelFloat="true" layoutX="840.0" layoutY="79.0" prefHeight="30.0" prefWidth="187.0" promptText="Job Type" styleClass="comboBox" stylesheets="@../style/orderForm.css" unFocusColor="#0c37e4" />
+            <JFXTextField fx:id="txtAddress" editable="false" labelFloat="true" layoutX="28.0" layoutY="204.0" prefHeight="29.0" prefWidth="292.0" promptText="Address" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtGmail" editable="false" labelFloat="true" layoutX="346.0" layoutY="204.0" prefHeight="30.0" prefWidth="417.0" promptText="Gmail" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXButton fx:id="btnnewid" buttonType="RAISED" layoutX="258.0" layoutY="84.0" onAction="#NewEmployeeIdOnAction" prefHeight="24.0" prefWidth="88.0" style="-fx-background-color: #2ecc71;" text="New +" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtId" labelFloat="true" layoutX="25.0" layoutY="82.0" prefHeight="30.0" prefWidth="220.0" promptText="Employee ID" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnsave" buttonType="RAISED" layoutX="101.0" layoutY="387.0" onAction="#SaveEmployeeOnAction" prefHeight="33.0" prefWidth="1012.0" style="-fx-background-color: #b51313;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="767.0" layoutY="38.0" prefHeight="70.0" prefWidth="372.0" stylesheets="@../style/label.css" text="Manager Employee Form">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="68.0" layoutY="450.0" prefHeight="271.0" prefWidth="1078.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <TableView fx:id="tblEmployee" layoutX="34.0" layoutY="64.0" onMouseClicked="#employeeDetailOnMouseClicked" pickOnBounds="false" prefHeight="197.0" prefWidth="1010.0" stylesheets="@../style/dashboard.css">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="105.0" text="Employee Id" />
+                  <TableColumn fx:id="colName" prefWidth="154.0" text="Name" />
+                  <TableColumn fx:id="colSalary" prefWidth="150.0" text="salary" />
+                  <TableColumn fx:id="colAddress" prefWidth="166.0" text="Address" />
+                  <TableColumn fx:id="colGmail" prefWidth="259.0" text="Gmail" />
+                  <TableColumn fx:id="colContact" prefWidth="175.0" text="Telephone No" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtsearchid" layoutX="57.0" layoutY="10.0" prefHeight="40.0" prefWidth="374.0" promptText="Search Employee" styleClass="txt-field" stylesheets="@../style/customer.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#4059a9" />
+               </effect>
+            </TextField>
+            <JFXButton fx:id="btnsearch" buttonType="RAISED" ellipsisString="" layoutX="411.0" layoutY="7.0" onAction="#searchEmployeeOnAction" prefHeight="45.0" prefWidth="54.0" style="-fx-background-color: #4059a9;" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#b51313" />
+               </effect>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="28.0">
+                     <image>
+                        <Image url="@../image/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.henHouse.controller.LoadingController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddd6d6" height="380.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="580.0">
+         <effect>
+            <DropShadow color="RED" />
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="262.0" fitWidth="274.0" layoutX="170.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/henShopLogo.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="prgBar" layoutX="39.0" layoutY="326.0" opacity="0.47" prefHeight="23.0" prefWidth="524.0" progress="0.0" style="-fx-background-radius: 50;" stylesheets="@../style/processBar.css" />
+      <Label layoutX="18.0" layoutY="25.0" prefHeight="61.0" prefWidth="565.0" style="-fx-alignment: center;" styleClass="welcomeLabel" stylesheets="@../style/label.css" text="HEN HOUSE MANAGEMENT SYSTEM" textFill="#ab0e0e" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Impact" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="435.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.henHouse.controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ddd6d6" height="413.0" layoutX="11.0" layoutY="12.0" stroke="BLACK" strokeType="INSIDE" width="628.0">
+         <effect>
+            <DropShadow color="RED" />
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="262.0" fitWidth="274.0" layoutX="22.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/henShopLogo.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="372.0" layoutX="305.0" layoutY="32.0" stroke="WHITE" strokeType="INSIDE" width="323.0" />
+      <ImageView fitHeight="67.0" fitWidth="77.0" layoutX="436.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/maleUser.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="30.0" layoutX="326.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icons8-email-96.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="323.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/icons8-lock-100.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="476.0" layoutY="287.0" prefHeight="21.0" prefWidth="120.0" text="Forgot Password ?" underline="true">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font></Label>
+      <JFXTextField fx:id="email" labelFloat="true" layoutX="370.0" layoutY="188.0" prefHeight="29.0" prefWidth="229.0" promptText="Email " styleClass="text-field-2" stylesheets="@../style/txtField.css" unFocusColor="#4059a9">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="password" labelFloat="true" layoutX="367.0" layoutY="250.0" prefHeight="29.0" prefWidth="229.0" promptText="Password" styleClass="text-field-2" stylesheets="@../style/txtField.css" unFocusColor="#4059a9">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="385.0" layoutY="336.0" onAction="#loginBtnOnAction" prefHeight="34.0" prefWidth="179.0" style="-fx-background-color: #b51313; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="418.0" layoutY="48.0" prefHeight="34.0" prefWidth="112.0" style="-fx-alignment: center;" text="Login" textFill="#b51313">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

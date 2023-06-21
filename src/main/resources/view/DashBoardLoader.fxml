@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="745.0" prefWidth="1158.0" stylesheets="@../style/dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.henHouse.controller.DashBoardLoaderController">
+   <children>
+      <Label layoutX="25.0" layoutY="34.0" prefHeight="40.0" prefWidth="331.0" text="Welcome to Dashboard!">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="42.0" layoutY="110.0" prefHeight="124.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="69.0" layoutX="184.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/employee.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="24.0" text="Total Employees" textFill="#d90429">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmployees" layoutX="70.0" layoutY="62.0" text="00" textFill="#d90429">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="443.0" layoutY="110.0" prefHeight="124.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="69.0" layoutX="184.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/customer.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="24.0" text="Total Customers" textFill="#f77f00">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomers" layoutX="61.0" layoutY="62.0" text="00" textFill="#f77f00">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="846.0" layoutY="110.0" prefHeight="124.0" prefWidth="268.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="69.0" layoutX="184.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/order.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="24.0" text="Total Orders" textFill="LIGHTCORAL">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblOrders" layoutX="61.0" layoutY="62.0" text="00" textFill="LIGHTCORAL">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="48.0" layoutY="269.0" prefHeight="446.0" prefWidth="636.0" style="-fx-background-color: white; -fx-background-radius: 50;">
+         <children>
+            <BarChart fx:id="barchart" layoutX="39.0" layoutY="69.0" prefHeight="339.0" prefWidth="559.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+            <Label layoutX="79.0" layoutY="35.0" prefHeight="24.0" prefWidth="255.0" text="Income Summery" textFill="#d90429">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="931.0" layoutY="582.0" prefHeight="117.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label fx:id="lblTime" layoutX="33.0" layoutY="22.0" text="08:51:51" textFill="#d90429">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="38.0" layoutY="71.0" text="2023-05-15" textFill="LIGHTCORAL">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="708.0" layoutY="273.0" prefHeight="263.0" prefWidth="425.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+         <children>
+            <TableView fx:id="tblItems" layoutX="34.0" layoutY="32.0" prefHeight="200.0" prefWidth="365.0">
+               <columns>
+                  <TableColumn fx:id="colItemId" prefWidth="115.0" text="Item Id" />
+                  <TableColumn fx:id="colItemName" prefWidth="134.0" text="Item Name" />
+                  <TableColumn fx:id="colQty" prefWidth="114.0" text="Qty on Hand" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="174.0" fitWidth="171.0" layoutX="731.0" layoutY="558.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/henShopLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

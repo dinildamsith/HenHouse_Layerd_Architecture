@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="745.0" prefWidth="1158.0" stylesheets="@../style/dashboard.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.henHouse.controller.CustomerController">
+   <children>
+      <Line endX="1123.2928466796875" endY="115.0" layoutY="-24.0" startX="50.29289245605469" startY="115.0" strokeWidth="3.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#cc0000" />
+                  <Stop color="#ff9966" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Label layoutX="753.0" layoutY="18.0" prefHeight="70.0" prefWidth="372.0" stylesheets="@../style/label.css" text="Manager Customer Form">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="54.0" layoutY="109.0" prefHeight="266.0" prefWidth="1073.0" style="-fx-background-radius: 20; -fx-background-color: white;">
+         <children>
+            <Label fx:id="lblMain" layoutX="20.0" layoutY="22.0" prefHeight="39.0" prefWidth="316.0" stylesheets="@../style/label.css" text="Add Customer Details" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="422.0" layoutY="82.0" prefHeight="30.0" prefWidth="220.0" promptText="Customer Name" stylesheets="@../style/txtField.css" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtTelephone" labelFloat="true" layoutX="810.0" layoutY="82.0" prefHeight="30.0" prefWidth="220.0" promptText="Telephone No" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="26.0" layoutY="160.0" prefHeight="29.0" prefWidth="440.0" promptText="Address" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtGmail" labelFloat="true" layoutX="590.0" layoutY="160.0" prefHeight="30.0" prefWidth="440.0" promptText="Gmail" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="26.0" layoutY="82.0" prefHeight="30.0" prefWidth="220.0" promptText="Customer Id" unFocusColor="#4059a9">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../style/txtField.css" />
+                  <URL value="@../style/dashboard.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="txtField" />
+                  <String fx:value="txtField" />
+               </styleClass>
+            </JFXTextField>
+            <JFXButton fx:id="reporBtntOnAction" layoutX="977.0" layoutY="14.0" onAction="#reportOnAction" style="-fx-background-color: #b51313;" stylesheets="@../style/dashboard.css" text="Report" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="49.0" layoutY="379.0" prefHeight="331.0" prefWidth="1078.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <TableView fx:id="tblCustomer" layoutX="36.0" layoutY="69.0" prefHeight="251.0" prefWidth="1010.0">
+               <columns>
+                  <TableColumn fx:id="colCustomerId" prefWidth="144.00003051757812" text="Customer Id" />
+                  <TableColumn fx:id="colCustomerName" prefWidth="217.65966796875" text="Name" />
+                  <TableColumn fx:id="colTelephone" prefWidth="152.34033203125" text="Telephone No" />
+                  <TableColumn fx:id="colAddress" prefWidth="215.83416748046875" text="Address" />
+                  <TableColumn fx:id="colGmail" prefWidth="277.16583251953125" text="Gmail" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtSearch" layoutX="41.0" layoutY="13.0" onAction="#txtSearchOnAction" prefHeight="40.0" prefWidth="374.0" promptText="Search Customer Id" styleClass="txt-field" stylesheets="@../style/customer.css">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#4059a9" />
+               </effect>
+            </TextField>
+            <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="415.0" layoutY="10.0" onAction="#btnSearchOnAction" prefHeight="45.0" prefWidth="71.0" style="-fx-background-color: #4059a9;" text="." textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#b51313" />
+               </effect>
+            </JFXButton>
+            <ImageView fitHeight="31.0" fitWidth="28.0" layoutX="438.0" layoutY="15.0">
+               <image>
+                  <Image url="@../image/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="81.0" layoutY="322.0" onAction="#btnSaveOnAction" prefHeight="33.0" prefWidth="1012.0" style="-fx-background-color: #b51313;" stylesheets="@../style/dashboard.css" text="Save Details" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
